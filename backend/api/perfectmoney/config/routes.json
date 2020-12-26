@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/perfectmonies",
+      "handler": "perfectmoney.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/perfectmonies/count",
+      "handler": "perfectmoney.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/perfectmonies/:id",
+      "handler": "perfectmoney.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/perfectmonies",
+      "handler": "perfectmoney.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/perfectmonies/:id",
+      "handler": "perfectmoney.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/perfectmonies/:id",
+      "handler": "perfectmoney.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

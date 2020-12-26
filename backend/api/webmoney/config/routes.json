@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/webmonies",
+      "handler": "webmoney.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/webmonies/count",
+      "handler": "webmoney.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/webmonies/:id",
+      "handler": "webmoney.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/webmonies",
+      "handler": "webmoney.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/webmonies/:id",
+      "handler": "webmoney.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/webmonies/:id",
+      "handler": "webmoney.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

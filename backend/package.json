@@ -1,0 +1,46 @@
+{
+    "name": "backend",
+    "private": true,
+    "version": "0.1.0",
+    "description": "A Strapi application",
+    "scripts": {
+        "develop": "strapi develop",
+        "start": "strapi start",
+        "build": "strapi build",
+        "strapi": "strapi"
+    },
+    "devDependencies": {},
+    "dependencies": {
+        "cloudinary": "^1.23.0",
+        "cloudinary-core": "^2.11.3",
+        "dotenv": "^8.2.0",
+        "fs": "^0.0.1-security",
+        "knex": "^0.21.14",
+        "mongodb": "^3.6.3",
+        "strapi": "3.4.0",
+        "strapi-admin": "3.4.1",
+        "strapi-connector-mongoose": "^3.4.1",
+        "strapi-generate": "^3.4.1",
+        "strapi-generate-plugin": "^3.4.1",
+        "strapi-plugin-content-manager": "3.4.1",
+        "strapi-plugin-content-type-builder": "3.4.1",
+        "strapi-plugin-documentation": "3.4.1",
+        "strapi-plugin-email": "3.4.1",
+        "strapi-plugin-graphql": "3.4.1",
+        "strapi-plugin-upload": "3.4.1",
+        "strapi-plugin-users-permissions": "3.4.1",
+        "strapi-provider-upload-cloudinary": "^3.4.1",
+        "strapi-utils": "3.4.1"
+    },
+    "author": {
+        "name": "A Strapi developer"
+    },
+    "strapi": {
+        "uuid": "1adbe544-188e-4b07-847c-c289a95668ca"
+    },
+    "engines": {
+        "node": ">=10.16.0 <=14.x.x",
+        "yarn": ">=1.22.5"
+    },
+    "license": "MIT"
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "perfectmonies",
+  "info": {
+    "name": "perfectmoney"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "description": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "enumeration",
+      "enum": [
+        "Sell",
+        "Buy"
+      ]
+    },
+    "min": {
+      "type": "biginteger"
+    },
+    "max": {
+      "type": "biginteger"
+    },
+    "price": {
+      "type": "float"
+    }
+  }
+}

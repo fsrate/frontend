@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_sections_heroes",
+  "info": {
+    "name": "hero",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

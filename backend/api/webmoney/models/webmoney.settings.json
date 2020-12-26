@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "webmonies",
+  "info": {
+    "name": "webmoney"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "description": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "enumeration",
+      "enum": [
+        "Sell",
+        "Buy"
+      ]
+    },
+    "min": {
+      "type": "biginteger"
+    },
+    "max": {
+      "type": "biginteger"
+    },
+    "price": {
+      "type": "float"
+    }
+  }
+}
