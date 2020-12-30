@@ -4,11 +4,11 @@ module.exports = ({ env }) => ({
         default: {
             connector: 'mongoose',
             settings: {
-                host: env('DATABASE_HOST'),
-                port: env.int('DATABASE_PORT'),
-                database: env('DATABASE_NAME'),
-                username: env('DATABASE_USERNAME'),
-                password: env('DATABASE_PASSWORD'),
+                host: env('DATABASE_HOST', 'cluster0.cyfes.mongodb.net'),
+                port: env.int('DATABASE_PORT', 27017),
+                database: env('DATABASE_NAME', 'backend'),
+                username: env('DATABASE_USERNAME', 'superAdmin'),
+                password: env('DATABASE_PASSWORD', 'Cyaver123'),
             },
             options: {},
         },
