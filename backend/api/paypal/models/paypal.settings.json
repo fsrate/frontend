@@ -28,6 +28,10 @@
     },
     "price": {
       "type": "float"
+    },
+    "currency": {
+      "via": "paypals",
+      "model": "currency"
     }
   }
 }

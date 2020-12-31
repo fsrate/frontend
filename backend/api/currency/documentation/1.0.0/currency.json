@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/webmonies": {
+    "/currencies": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Webmoney"
+                    "$ref": "#/components/schemas/Currency"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Webmoney"
+          "Currency"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Webmoney"
+                  "$ref": "#/components/schemas/Currency"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Webmoney"
+          "Currency"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewWebmoney"
+                "$ref": "#/components/schemas/NewCurrency"
               }
             }
           }
         }
       }
     },
-    "/webmonies/count": {
+    "/currencies/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Webmoney"
+          "Currency"
         ],
         "parameters": []
       }
     },
-    "/webmonies/{id}": {
+    "/currencies/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Webmoney"
+                  "$ref": "#/components/schemas/Currency"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Webmoney"
+          "Currency"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Webmoney"
+                  "$ref": "#/components/schemas/Currency"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Webmoney"
+          "Currency"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewWebmoney"
+                "$ref": "#/components/schemas/NewCurrency"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Webmoney"
+          "Currency"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Webmoney": {
+      "Currency": {
         "required": [
           "id"
         ],
@@ -522,26 +522,203 @@
           "id": {
             "type": "string"
           },
+          "title": {
+            "type": "string"
+          },
           "description": {
             "type": "string"
           },
-          "kind": {
-            "type": "string",
-            "enum": [
-              "Sell",
-              "Buy"
-            ]
+          "slug": {
+            "type": "uid"
           },
-          "min": {
-            "type": "integer"
+          "image": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           },
-          "max": {
-            "type": "integer"
+          "paypals": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "kind": {
+                  "type": "string"
+                },
+                "min": {
+                  "type": "integer"
+                },
+                "max": {
+                  "type": "integer"
+                },
+                "price": {
+                  "type": "number"
+                },
+                "currency": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           },
-          "price": {
-            "type": "number"
+          "perfectmonies": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "kind": {
+                  "type": "string"
+                },
+                "min": {
+                  "type": "integer"
+                },
+                "max": {
+                  "type": "integer"
+                },
+                "price": {
+                  "type": "number"
+                },
+                "currency": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           },
-          "currency": {
+          "webmonies": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "kind": {
+                  "type": "string"
+                },
+                "min": {
+                  "type": "integer"
+                },
+                "max": {
+                  "type": "integer"
+                },
+                "price": {
+                  "type": "number"
+                },
+                "currency": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "category": {
             "required": [
               "id"
             ],
@@ -549,10 +726,7 @@
               "id": {
                 "type": "string"
               },
-              "title": {
-                "type": "string"
-              },
-              "description": {
+              "name": {
                 "type": "string"
               },
               "slug": {
@@ -561,26 +735,14 @@
               "image": {
                 "type": "string"
               },
-              "paypals": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "perfectmonies": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "webmonies": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "category": {
+              "description": {
                 "type": "string"
+              },
+              "currencies": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "published_at": {
                 "type": "string"
@@ -599,28 +761,36 @@
           }
         }
       },
-      "NewWebmoney": {
+      "NewCurrency": {
         "properties": {
+          "title": {
+            "type": "string"
+          },
           "description": {
             "type": "string"
           },
-          "kind": {
-            "type": "string",
-            "enum": [
-              "Sell",
-              "Buy"
-            ]
+          "slug": {
+            "type": "uid"
           },
-          "min": {
-            "type": "integer"
+          "paypals": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
-          "max": {
-            "type": "integer"
+          "perfectmonies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
-          "price": {
-            "type": "number"
+          "webmonies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
-          "currency": {
+          "category": {
             "type": "string"
           },
           "published_at": {
@@ -639,7 +809,7 @@
   },
   "tags": [
     {
-      "name": "Webmoney"
+      "name": "Currency"
     }
   ]
 }

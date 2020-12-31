@@ -541,6 +541,58 @@
           "price": {
             "type": "number"
           },
+          "currency": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "slug": {
+                "type": "uid"
+              },
+              "image": {
+                "type": "string"
+              },
+              "paypals": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "perfectmonies": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "webmonies": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "category": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -567,6 +619,9 @@
           },
           "price": {
             "type": "number"
+          },
+          "currency": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
