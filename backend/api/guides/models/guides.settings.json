@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "guides",
+  "info": {
+    "name": "guides"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}
