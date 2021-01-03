@@ -12,6 +12,10 @@
   "attributes": {
     "title": {
       "type": "string"
+    },
+    "category": {
+      "via": "guides",
+      "model": "category"
     }
   }
 }

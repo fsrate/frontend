@@ -522,9 +522,6 @@
           "id": {
             "type": "string"
           },
-          "title": {
-            "type": "string"
-          },
           "description": {
             "type": "string"
           },
@@ -534,9 +531,6 @@
               "Sell",
               "Buy"
             ]
-          },
-          "slug": {
-            "type": "uid"
           },
           "min": {
             "type": "integer"
@@ -619,9 +613,6 @@
       },
       "NewSkrill": {
         "properties": {
-          "title": {
-            "type": "string"
-          },
           "description": {
             "type": "string"
           },
@@ -631,9 +622,6 @@
               "Sell",
               "Buy"
             ]
-          },
-          "slug": {
-            "type": "uid"
           },
           "min": {
             "type": "integer"

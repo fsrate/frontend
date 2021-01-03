@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/03/2021 6:12:40 PM"
+    "x-generation-date": "01/04/2021 12:00:44 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6999,6 +6999,34 @@
               }
             }
           },
+          "guides": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "category": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -7017,6 +7045,12 @@
             "type": "string"
           },
           "currencies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "guides": {
             "type": "array",
             "items": {
               "type": "string"
@@ -7264,6 +7298,12 @@
                   "type": "string"
                 }
               },
+              "guides": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "published_at": {
                 "type": "string"
               },
@@ -7325,17 +7365,11 @@
                 "id": {
                   "type": "string"
                 },
-                "title": {
-                  "type": "string"
-                },
                 "description": {
                   "type": "string"
                 },
                 "kind": {
                   "type": "string"
-                },
-                "slug": {
-                  "type": "uid"
                 },
                 "min": {
                   "type": "integer"
@@ -7703,6 +7737,49 @@
           "title": {
             "type": "string"
           },
+          "category": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "slug": {
+                "type": "uid"
+              },
+              "image": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "currencies": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "guides": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -7712,6 +7789,9 @@
       "NewGuides": {
         "properties": {
           "title": {
+            "type": "string"
+          },
+          "category": {
             "type": "string"
           },
           "published_at": {
@@ -8357,9 +8437,6 @@
           "id": {
             "type": "string"
           },
-          "title": {
-            "type": "string"
-          },
           "description": {
             "type": "string"
           },
@@ -8369,9 +8446,6 @@
               "Sell",
               "Buy"
             ]
-          },
-          "slug": {
-            "type": "uid"
           },
           "min": {
             "type": "integer"
@@ -8454,9 +8528,6 @@
       },
       "NewSkrill": {
         "properties": {
-          "title": {
-            "type": "string"
-          },
           "description": {
             "type": "string"
           },
@@ -8466,9 +8537,6 @@
               "Sell",
               "Buy"
             ]
-          },
-          "slug": {
-            "type": "uid"
           },
           "min": {
             "type": "integer"

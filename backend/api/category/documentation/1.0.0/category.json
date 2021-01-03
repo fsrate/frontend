@@ -665,6 +665,34 @@
               }
             }
           },
+          "guides": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "category": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -683,6 +711,12 @@
             "type": "string"
           },
           "currencies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "guides": {
             "type": "array",
             "items": {
               "type": "string"

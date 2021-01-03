@@ -33,8 +33,12 @@
       "type": "string"
     },
     "currencies": {
-      "via": "category",
-      "collection": "currency"
+      "collection": "currency",
+      "via": "category"
+    },
+    "guides": {
+      "collection": "guides",
+      "via": "category"
     }
   }
 }

@@ -744,6 +744,12 @@
                   "type": "string"
                 }
               },
+              "guides": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "published_at": {
                 "type": "string"
               },
@@ -805,17 +811,11 @@
                 "id": {
                   "type": "string"
                 },
-                "title": {
-                  "type": "string"
-                },
                 "description": {
                   "type": "string"
                 },
                 "kind": {
                   "type": "string"
-                },
-                "slug": {
-                  "type": "uid"
                 },
                 "min": {
                   "type": "integer"

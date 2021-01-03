@@ -43,16 +43,16 @@
       "via": "currency"
     },
     "category": {
-      "model": "category",
-      "via": "currencies"
+      "via": "currencies",
+      "model": "category"
     },
     "netellers": {
       "via": "currency",
       "collection": "neteller"
     },
     "skrills": {
-      "collection": "skrill",
-      "via": "currency"
+      "via": "currency",
+      "collection": "skrill"
     }
   }
 }
