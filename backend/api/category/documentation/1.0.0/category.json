@@ -641,6 +641,18 @@
                 "category": {
                   "type": "string"
                 },
+                "netellers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skrills": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "published_at": {
                   "type": "string"
                 },

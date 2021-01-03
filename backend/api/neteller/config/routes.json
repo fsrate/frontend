@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/netellers",
+      "handler": "neteller.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/netellers/count",
+      "handler": "neteller.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/netellers/:id",
+      "handler": "neteller.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/netellers",
+      "handler": "neteller.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/netellers/:id",
+      "handler": "neteller.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/netellers/:id",
+      "handler": "neteller.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

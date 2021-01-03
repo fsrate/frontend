@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/perfectmonies": {
+    "/skrills": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Perfectmoney"
+                    "$ref": "#/components/schemas/Skrill"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Perfectmoney"
+          "Skrill"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Perfectmoney"
+                  "$ref": "#/components/schemas/Skrill"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Perfectmoney"
+          "Skrill"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPerfectmoney"
+                "$ref": "#/components/schemas/NewSkrill"
               }
             }
           }
         }
       }
     },
-    "/perfectmonies/count": {
+    "/skrills/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Perfectmoney"
+          "Skrill"
         ],
         "parameters": []
       }
     },
-    "/perfectmonies/{id}": {
+    "/skrills/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Perfectmoney"
+                  "$ref": "#/components/schemas/Skrill"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Perfectmoney"
+          "Skrill"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Perfectmoney"
+                  "$ref": "#/components/schemas/Skrill"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Perfectmoney"
+          "Skrill"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPerfectmoney"
+                "$ref": "#/components/schemas/NewSkrill"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Perfectmoney"
+          "Skrill"
         ],
         "parameters": [
           {
@@ -514,12 +514,15 @@
   },
   "components": {
     "schemas": {
-      "Perfectmoney": {
+      "Skrill": {
         "required": [
           "id"
         ],
         "properties": {
           "id": {
+            "type": "string"
+          },
+          "title": {
             "type": "string"
           },
           "description": {
@@ -531,6 +534,9 @@
               "Sell",
               "Buy"
             ]
+          },
+          "slug": {
+            "type": "uid"
           },
           "min": {
             "type": "integer"
@@ -611,8 +617,11 @@
           }
         }
       },
-      "NewPerfectmoney": {
+      "NewSkrill": {
         "properties": {
+          "title": {
+            "type": "string"
+          },
           "description": {
             "type": "string"
           },
@@ -622,6 +631,9 @@
               "Sell",
               "Buy"
             ]
+          },
+          "slug": {
+            "type": "uid"
           },
           "min": {
             "type": "integer"
@@ -651,7 +663,7 @@
   },
   "tags": [
     {
-      "name": "Perfectmoney"
+      "name": "Skrill"
     }
   ]
 }

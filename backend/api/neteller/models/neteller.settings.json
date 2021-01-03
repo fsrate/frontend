@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "netellers",
+  "info": {
+    "name": "neteller",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "kind": {
+      "type": "enumeration",
+      "enum": [
+        "Sell",
+        "Buy"
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "min": {
+      "type": "biginteger"
+    },
+    "max": {
+      "type": "biginteger"
+    },
+    "price": {
+      "type": "float"
+    },
+    "currency": {
+      "model": "currency",
+      "via": "netellers"
+    }
+  }
+}

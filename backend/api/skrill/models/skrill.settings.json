@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "skrills",
+  "info": {
+    "name": "skrill"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "enumeration",
+      "enum": [
+        "Sell",
+        "Buy"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "min": {
+      "type": "biginteger"
+    },
+    "max": {
+      "type": "biginteger"
+    },
+    "price": {
+      "type": "float"
+    },
+    "currency": {
+      "via": "skrills",
+      "model": "currency"
+    }
+  }
+}

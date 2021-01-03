@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/perfectmonies": {
+    "/netellers": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Perfectmoney"
+                    "$ref": "#/components/schemas/Neteller"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Perfectmoney"
+          "Neteller"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Perfectmoney"
+                  "$ref": "#/components/schemas/Neteller"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Perfectmoney"
+          "Neteller"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPerfectmoney"
+                "$ref": "#/components/schemas/NewNeteller"
               }
             }
           }
         }
       }
     },
-    "/perfectmonies/count": {
+    "/netellers/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Perfectmoney"
+          "Neteller"
         ],
         "parameters": []
       }
     },
-    "/perfectmonies/{id}": {
+    "/netellers/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Perfectmoney"
+                  "$ref": "#/components/schemas/Neteller"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Perfectmoney"
+          "Neteller"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Perfectmoney"
+                  "$ref": "#/components/schemas/Neteller"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Perfectmoney"
+          "Neteller"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPerfectmoney"
+                "$ref": "#/components/schemas/NewNeteller"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Perfectmoney"
+          "Neteller"
         ],
         "parameters": [
           {
@@ -514,15 +514,12 @@
   },
   "components": {
     "schemas": {
-      "Perfectmoney": {
+      "Neteller": {
         "required": [
           "id"
         ],
         "properties": {
           "id": {
-            "type": "string"
-          },
-          "description": {
             "type": "string"
           },
           "kind": {
@@ -531,6 +528,9 @@
               "Sell",
               "Buy"
             ]
+          },
+          "description": {
+            "type": "string"
           },
           "min": {
             "type": "integer"
@@ -611,17 +611,17 @@
           }
         }
       },
-      "NewPerfectmoney": {
+      "NewNeteller": {
         "properties": {
-          "description": {
-            "type": "string"
-          },
           "kind": {
             "type": "string",
             "enum": [
               "Sell",
               "Buy"
             ]
+          },
+          "description": {
+            "type": "string"
           },
           "min": {
             "type": "integer"
@@ -651,7 +651,7 @@
   },
   "tags": [
     {
-      "name": "Perfectmoney"
+      "name": "Neteller"
     }
   ]
 }
