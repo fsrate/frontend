@@ -11,9 +11,9 @@
   },
   "attributes": {
     "users_permissions_user": {
+      "via": "profile",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "profile"
+      "model": "user"
     },
     "users_permissions_role": {
       "plugin": "users-permissions",

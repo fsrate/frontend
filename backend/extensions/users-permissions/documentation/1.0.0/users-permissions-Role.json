@@ -529,7 +529,8 @@
                 "id",
                 "username",
                 "email",
-                "mobile"
+                "mobile",
+                "fullName"
               ],
               "properties": {
                 "id": {
@@ -567,6 +568,12 @@
                 },
                 "profile": {
                   "type": "string"
+                },
+                "fullName": {
+                  "type": "string"
+                },
+                "passport": {
+                  "type": "component"
                 },
                 "created_by": {
                   "type": "string"

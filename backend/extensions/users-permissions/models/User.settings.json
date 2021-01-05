@@ -67,8 +67,20 @@
       "minLength": 6
     },
     "profile": {
-      "via": "users_permissions_user",
-      "model": "profile"
+      "model": "profile",
+      "via": "users_permissions_user"
+    },
+    "fullName": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 30,
+      "minLength": 1
+    },
+    "passport": {
+      "type": "component",
+      "repeatable": false,
+      "component": "users.user-uploads"
     }
   }
 }
