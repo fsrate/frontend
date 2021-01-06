@@ -53,6 +53,10 @@
     "skrills": {
       "via": "currency",
       "collection": "skrill"
+    },
+    "ordersell": {
+      "via": "currency",
+      "model": "order"
     }
   }
 }

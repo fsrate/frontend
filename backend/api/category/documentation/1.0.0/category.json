@@ -653,6 +653,9 @@
                     "type": "string"
                   }
                 },
+                "ordersell": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },

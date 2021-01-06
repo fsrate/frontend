@@ -841,6 +841,42 @@
               }
             }
           },
+          "ordersell": {
+            "required": [
+              "id",
+              "amount",
+              "upload"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "users_permissions_user": {
+                "type": "string"
+              },
+              "currency": {
+                "type": "string"
+              },
+              "amount": {
+                "type": "integer"
+              },
+              "total": {
+                "type": "number"
+              },
+              "status": {
+                "type": "string"
+              },
+              "upload": {
+                "type": "component"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -890,6 +926,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "ordersell": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

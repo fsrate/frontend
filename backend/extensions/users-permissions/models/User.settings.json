@@ -81,6 +81,10 @@
       "type": "component",
       "repeatable": false,
       "component": "users.user-uploads"
+    },
+    "ordersells": {
+      "via": "users_permissions_user",
+      "collection": "order"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/profiles": {
+    "/orders": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Profile"
+                    "$ref": "#/components/schemas/Order"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Profile"
+          "Order"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Profile"
+                  "$ref": "#/components/schemas/Order"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Profile"
+          "Order"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProfile"
+                "$ref": "#/components/schemas/NewOrder"
               }
             }
           }
         }
       }
     },
-    "/profiles/count": {
+    "/orders/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Profile"
+          "Order"
         ],
         "parameters": []
       }
     },
-    "/profiles/{id}": {
+    "/orders/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Profile"
+                  "$ref": "#/components/schemas/Order"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Profile"
+          "Order"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Profile"
+                  "$ref": "#/components/schemas/Order"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Profile"
+          "Order"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProfile"
+                "$ref": "#/components/schemas/NewOrder"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Profile"
+          "Order"
         ],
         "parameters": [
           {
@@ -514,9 +514,11 @@
   },
   "components": {
     "schemas": {
-      "Profile": {
+      "Order": {
         "required": [
-          "id"
+          "id",
+          "amount",
+          "upload"
         ],
         "properties": {
           "id": {
@@ -587,37 +589,63 @@
               }
             }
           },
-          "users_permissions_role": {
+          "currency": {
             "required": [
-              "id",
-              "name"
+              "id"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "name": {
+              "title": {
                 "type": "string"
               },
               "description": {
                 "type": "string"
               },
-              "type": {
+              "slug": {
+                "type": "uid"
+              },
+              "image": {
                 "type": "string"
               },
-              "permissions": {
+              "paypals": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "users": {
+              "perfectmonies": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "profile": {
+              "webmonies": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "category": {
+                "type": "string"
+              },
+              "netellers": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "skrills": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "ordersell": {
+                "type": "string"
+              },
+              "published_at": {
                 "type": "string"
               },
               "created_by": {
@@ -628,23 +656,213 @@
               }
             }
           },
-          "published_at": {
+          "amount": {
+            "type": "integer"
+          },
+          "total": {
+            "type": "number"
+          },
+          "status": {
             "type": "string",
-            "format": "date-time"
+            "default": "Pending",
+            "enum": [
+              "Pending",
+              "Completed",
+              "Canceled"
+            ]
+          },
+          "upload": {
+            "type": "object",
+            "required": [
+              "id",
+              "image"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "image": {
+                "required": [
+                  "id",
+                  "name",
+                  "hash",
+                  "mime",
+                  "size",
+                  "url",
+                  "provider"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "alternativeText": {
+                    "type": "string"
+                  },
+                  "caption": {
+                    "type": "string"
+                  },
+                  "width": {
+                    "type": "integer"
+                  },
+                  "height": {
+                    "type": "integer"
+                  },
+                  "formats": {
+                    "type": "object"
+                  },
+                  "hash": {
+                    "type": "string"
+                  },
+                  "ext": {
+                    "type": "string"
+                  },
+                  "mime": {
+                    "type": "string"
+                  },
+                  "size": {
+                    "type": "number"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "previewUrl": {
+                    "type": "string"
+                  },
+                  "provider": {
+                    "type": "string"
+                  },
+                  "provider_metadata": {
+                    "type": "object"
+                  },
+                  "related": {
+                    "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
+                    "type": "string"
+                  }
+                }
+              },
+              "caption": {
+                "type": "string"
+              }
+            }
           }
         }
       },
-      "NewProfile": {
+      "NewOrder": {
+        "required": [
+          "amount",
+          "upload"
+        ],
         "properties": {
           "users_permissions_user": {
             "type": "string"
           },
-          "users_permissions_role": {
+          "currency": {
             "type": "string"
           },
-          "published_at": {
+          "amount": {
+            "type": "integer"
+          },
+          "total": {
+            "type": "number"
+          },
+          "status": {
             "type": "string",
-            "format": "date-time"
+            "default": "Pending",
+            "enum": [
+              "Pending",
+              "Completed",
+              "Canceled"
+            ]
+          },
+          "upload": {
+            "type": "object",
+            "required": [
+              "id",
+              "image"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "image": {
+                "required": [
+                  "id",
+                  "name",
+                  "hash",
+                  "mime",
+                  "size",
+                  "url",
+                  "provider"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "alternativeText": {
+                    "type": "string"
+                  },
+                  "caption": {
+                    "type": "string"
+                  },
+                  "width": {
+                    "type": "integer"
+                  },
+                  "height": {
+                    "type": "integer"
+                  },
+                  "formats": {
+                    "type": "object"
+                  },
+                  "hash": {
+                    "type": "string"
+                  },
+                  "ext": {
+                    "type": "string"
+                  },
+                  "mime": {
+                    "type": "string"
+                  },
+                  "size": {
+                    "type": "number"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "previewUrl": {
+                    "type": "string"
+                  },
+                  "provider": {
+                    "type": "string"
+                  },
+                  "provider_metadata": {
+                    "type": "object"
+                  },
+                  "related": {
+                    "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
+                    "type": "string"
+                  }
+                }
+              },
+              "caption": {
+                "type": "string"
+              }
+            }
           },
           "created_by": {
             "type": "string"
@@ -658,7 +876,7 @@
   },
   "tags": [
     {
-      "name": "Profile"
+      "name": "Order"
     }
   ]
 }

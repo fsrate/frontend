@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "name": "order",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "ordersells"
+    },
+    "currency": {
+      "model": "currency",
+      "via": "ordersell"
+    },
+    "amount": {
+      "type": "biginteger",
+      "required": true,
+      "max": "10000",
+      "min": "100"
+    },
+    "total": {
+      "type": "float"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Pending",
+        "Completed",
+        "Canceled"
+      ],
+      "default": "Pending"
+    },
+    "upload": {
+      "type": "component",
+      "repeatable": false,
+      "component": "users.user-order-uploads",
+      "required": true
+    }
+  }
+}

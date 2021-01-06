@@ -575,6 +575,12 @@
                 "passport": {
                   "type": "component"
                 },
+                "ordersells": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "created_by": {
                   "type": "string"
                 },

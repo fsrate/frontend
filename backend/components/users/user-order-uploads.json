@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_users_user_order_uploads",
+  "info": {
+    "name": "UserOrderUploads",
+    "icon": "atlas"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "caption": {
+      "type": "string"
+    }
+  }
+}
