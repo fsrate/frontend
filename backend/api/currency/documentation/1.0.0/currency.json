@@ -750,6 +750,18 @@
                   "type": "string"
                 }
               },
+              "orders": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "users_permissions_users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "published_at": {
                 "type": "string"
               },
@@ -868,6 +880,9 @@
               },
               "upload": {
                 "type": "component"
+              },
+              "category": {
+                "type": "string"
               },
               "created_by": {
                 "type": "string"

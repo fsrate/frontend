@@ -85,6 +85,10 @@
     "ordersells": {
       "via": "users_permissions_user",
       "collection": "order"
+    },
+    "category": {
+      "via": "users_permissions_users",
+      "model": "category"
     }
   }
 }

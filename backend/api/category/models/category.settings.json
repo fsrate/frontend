@@ -39,6 +39,15 @@
     "guides": {
       "collection": "guides",
       "via": "category"
+    },
+    "orders": {
+      "collection": "order",
+      "via": "category"
+    },
+    "users_permissions_users": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "category"
     }
   }
 }

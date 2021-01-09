@@ -581,6 +581,9 @@
                     "type": "string"
                   }
                 },
+                "category": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },

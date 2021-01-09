@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/06/2021 6:35:14 AM"
+    "x-generation-date": "01/09/2021 7:40:06 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -8052,6 +8052,119 @@
               }
             }
           },
+          "orders": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "amount",
+                "upload"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "users_permissions_user": {
+                  "type": "string"
+                },
+                "currency": {
+                  "type": "string"
+                },
+                "amount": {
+                  "type": "integer"
+                },
+                "total": {
+                  "type": "number"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "upload": {
+                  "type": "component"
+                },
+                "category": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "users_permissions_users": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "username",
+                "email",
+                "mobile",
+                "fullName"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "username": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                },
+                "resetPasswordToken": {
+                  "type": "string"
+                },
+                "confirmationToken": {
+                  "type": "string"
+                },
+                "confirmed": {
+                  "type": "boolean"
+                },
+                "blocked": {
+                  "type": "boolean"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "mobile": {
+                  "type": "string"
+                },
+                "profile": {
+                  "type": "string"
+                },
+                "fullName": {
+                  "type": "string"
+                },
+                "passport": {
+                  "type": "component"
+                },
+                "ordersells": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "category": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -8076,6 +8189,18 @@
             }
           },
           "guides": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "users_permissions_users": {
             "type": "array",
             "items": {
               "type": "string"
@@ -8329,6 +8454,18 @@
                   "type": "string"
                 }
               },
+              "orders": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "users_permissions_users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "published_at": {
                 "type": "string"
               },
@@ -8447,6 +8584,9 @@
               },
               "upload": {
                 "type": "component"
+              },
+              "category": {
+                "type": "string"
               },
               "created_by": {
                 "type": "string"
@@ -8828,6 +8968,18 @@
                 }
               },
               "guides": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "orders": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "users_permissions_users": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -9297,6 +9449,9 @@
                   "type": "string"
                 }
               },
+              "category": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -9468,6 +9623,61 @@
                 "type": "string"
               }
             }
+          },
+          "category": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "slug": {
+                "type": "uid"
+              },
+              "image": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "currencies": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "guides": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "orders": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "users_permissions_users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -9579,6 +9789,9 @@
                 "type": "string"
               }
             }
+          },
+          "category": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
@@ -9924,6 +10137,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "category": {
+                "type": "string"
               },
               "created_by": {
                 "type": "string"
@@ -10391,6 +10607,9 @@
                     "type": "string"
                   }
                 },
+                "category": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -10686,12 +10905,70 @@
                 "upload": {
                   "type": "component"
                 },
+                "category": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
                 "updated_by": {
                   "type": "string"
                 }
+              }
+            }
+          },
+          "category": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "slug": {
+                "type": "uid"
+              },
+              "image": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "currencies": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "guides": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "orders": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "users_permissions_users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           }
@@ -10840,6 +11117,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "category": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

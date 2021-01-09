@@ -22,9 +22,7 @@
     },
     "amount": {
       "type": "biginteger",
-      "required": true,
-      "max": "10000",
-      "min": "100"
+      "required": true
     },
     "total": {
       "type": "float"
@@ -43,6 +41,10 @@
       "repeatable": false,
       "component": "users.user-order-uploads",
       "required": true
+    },
+    "category": {
+      "via": "orders",
+      "model": "category"
     }
   }
 }
