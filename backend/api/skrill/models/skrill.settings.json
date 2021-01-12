@@ -31,8 +31,8 @@
       "type": "float"
     },
     "currency": {
-      "model": "currency",
-      "via": "skrills"
+      "via": "skrills",
+      "model": "currency"
     }
   }
 }

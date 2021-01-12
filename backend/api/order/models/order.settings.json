@@ -12,13 +12,13 @@
   },
   "attributes": {
     "users_permissions_user": {
+      "via": "ordersells",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "ordersells"
+      "model": "user"
     },
     "currency": {
-      "model": "currency",
-      "via": "ordersell"
+      "via": "ordersell",
+      "model": "currency"
     },
     "amount": {
       "type": "biginteger",

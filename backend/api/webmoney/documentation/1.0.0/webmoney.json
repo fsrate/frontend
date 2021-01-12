@@ -597,6 +597,9 @@
               "ordersell": {
                 "type": "string"
               },
+              "text": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },

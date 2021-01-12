@@ -566,9 +566,6 @@
               "mobile": {
                 "type": "string"
               },
-              "profile": {
-                "type": "string"
-              },
               "fullName": {
                 "type": "string"
               },
@@ -646,6 +643,9 @@
                 }
               },
               "ordersell": {
+                "type": "string"
+              },
+              "text": {
                 "type": "string"
               },
               "published_at": {

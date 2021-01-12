@@ -66,10 +66,6 @@
       "maxLength": 20,
       "minLength": 6
     },
-    "profile": {
-      "model": "profile",
-      "via": "users_permissions_user"
-    },
     "fullName": {
       "type": "string",
       "required": true,
@@ -83,12 +79,12 @@
       "component": "users.user-uploads"
     },
     "ordersells": {
-      "via": "users_permissions_user",
-      "collection": "order"
+      "collection": "order",
+      "via": "users_permissions_user"
     },
     "category": {
-      "via": "users_permissions_users",
-      "model": "category"
+      "model": "category",
+      "via": "users_permissions_users"
     }
   }
 }

@@ -656,6 +656,9 @@
                 "ordersell": {
                   "type": "string"
                 },
+                "text": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -780,9 +783,6 @@
                   "type": "string"
                 },
                 "mobile": {
-                  "type": "string"
-                },
-                "profile": {
                   "type": "string"
                 },
                 "fullName": {

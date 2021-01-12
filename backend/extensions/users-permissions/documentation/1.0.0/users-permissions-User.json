@@ -1245,9 +1245,6 @@
                   "type": "string"
                 }
               },
-              "profile": {
-                "type": "string"
-              },
               "created_by": {
                 "type": "string"
               },
@@ -1260,31 +1257,6 @@
             "type": "string",
             "maxLength": 20,
             "minLength": 6
-          },
-          "profile": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "users_permissions_user": {
-                "type": "string"
-              },
-              "users_permissions_role": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
           },
           "fullName": {
             "type": "string",
@@ -1519,9 +1491,6 @@
             "type": "string",
             "maxLength": 20,
             "minLength": 6
-          },
-          "profile": {
-            "type": "string"
           },
           "fullName": {
             "type": "string",

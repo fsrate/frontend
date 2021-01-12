@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_users_products",
+  "info": {
+    "name": "Products",
+    "icon": "apple-alt"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "enumeration",
+      "enum": [
+        "paypals",
+        "webmonies",
+        "perfectmonies",
+        "netellers",
+        "skrills"
+      ]
+    },
+    "kind": {
+      "type": "enumeration",
+      "enum": [
+        "Sell",
+        "Buy"
+      ]
+    },
+    "amount": {
+      "type": "biginteger"
+    },
+    "currency": {
+      "model": "currency"
+    }
+  }
+}

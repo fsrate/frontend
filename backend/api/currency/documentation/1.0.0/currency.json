@@ -892,6 +892,9 @@
               }
             }
           },
+          "text": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -943,6 +946,9 @@
             }
           },
           "ordersell": {
+            "type": "string"
+          },
+          "text": {
             "type": "string"
           },
           "published_at": {

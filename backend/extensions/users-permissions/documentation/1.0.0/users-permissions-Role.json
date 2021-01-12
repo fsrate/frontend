@@ -566,9 +566,6 @@
                 "mobile": {
                   "type": "string"
                 },
-                "profile": {
-                  "type": "string"
-                },
                 "fullName": {
                   "type": "string"
                 },
@@ -590,31 +587,6 @@
                 "updated_by": {
                   "type": "string"
                 }
-              }
-            }
-          },
-          "profile": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "users_permissions_user": {
-                "type": "string"
-              },
-              "users_permissions_role": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
               }
             }
           }
@@ -646,9 +618,6 @@
             "items": {
               "type": "string"
             }
-          },
-          "profile": {
-            "type": "string"
           },
           "created_by": {
             "type": "string"

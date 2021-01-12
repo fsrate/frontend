@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_users_custom_fields",
+  "info": {
+    "name": "customField",
+    "icon": "stop"
+  },
+  "options": {},
+  "attributes": {
+    "avatarImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
