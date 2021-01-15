@@ -55,8 +55,8 @@
       "via": "currency"
     },
     "ordersell": {
-      "model": "order",
-      "via": "currency"
+      "via": "currency",
+      "model": "order"
     },
     "text": {
       "type": "string"

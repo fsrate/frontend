@@ -12,13 +12,13 @@
   },
   "attributes": {
     "users_permissions_user": {
-      "via": "ordersells",
       "plugin": "users-permissions",
-      "model": "user"
+      "model": "user",
+      "via": "ordersells"
     },
     "currency": {
-      "via": "ordersell",
-      "model": "currency"
+      "model": "currency",
+      "via": "ordersell"
     },
     "amount": {
       "type": "biginteger",
@@ -43,8 +43,11 @@
       "required": true
     },
     "category": {
-      "via": "orders",
-      "model": "category"
+      "model": "category",
+      "via": "orders"
+    },
+    "price": {
+      "type": "float"
     }
   }
 }

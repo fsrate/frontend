@@ -79,8 +79,8 @@
       "component": "users.user-uploads"
     },
     "ordersells": {
-      "collection": "order",
-      "via": "users_permissions_user"
+      "via": "users_permissions_user",
+      "collection": "order"
     },
     "category": {
       "model": "category",

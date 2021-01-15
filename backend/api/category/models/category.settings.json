@@ -41,8 +41,8 @@
       "via": "category"
     },
     "orders": {
-      "collection": "order",
-      "via": "category"
+      "via": "category",
+      "collection": "order"
     },
     "users_permissions_users": {
       "via": "category",

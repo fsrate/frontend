@@ -810,6 +810,9 @@
                 "type": "string"
               }
             }
+          },
+          "price": {
+            "type": "number"
           }
         }
       },
@@ -924,6 +927,9 @@
           },
           "category": {
             "type": "string"
+          },
+          "price": {
+            "type": "number"
           },
           "created_by": {
             "type": "string"
