@@ -2,52 +2,41 @@
   "kind": "collectionType",
   "collectionName": "orders",
   "info": {
-    "name": "order",
-    "description": ""
+    "name": "order"
   },
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
   "attributes": {
     "users_permissions_user": {
       "plugin": "users-permissions",
       "model": "user",
-      "via": "ordersells"
+      "via": "orders"
     },
-    "currency": {
-      "model": "currency",
-      "via": "ordersell"
+    "product": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string"
     },
     "amount": {
-      "type": "biginteger",
-      "required": true
+      "type": "float"
+    },
+    "price": {
+      "type": "float"
     },
     "total": {
       "type": "float"
     },
     "status": {
-      "type": "enumeration",
-      "enum": [
-        "Pending",
-        "Completed",
-        "Canceled"
-      ],
-      "default": "Pending"
+      "type": "string"
     },
     "upload": {
       "type": "component",
       "repeatable": false,
-      "component": "users.user-order-uploads",
-      "required": true
-    },
-    "category": {
-      "model": "category",
-      "via": "orders"
-    },
-    "price": {
-      "type": "float"
+      "component": "users.user-order-uploads"
     }
   }
 }

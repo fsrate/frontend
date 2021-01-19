@@ -78,13 +78,13 @@
       "repeatable": false,
       "component": "users.user-uploads"
     },
-    "ordersells": {
+    "category": {
+      "via": "users_permissions_users",
+      "model": "category"
+    },
+    "orders": {
       "via": "users_permissions_user",
       "collection": "order"
-    },
-    "category": {
-      "model": "category",
-      "via": "users_permissions_users"
     }
   }
 }

@@ -557,12 +557,6 @@
                   "type": "string"
                 }
               },
-              "orders": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "users_permissions_users": {
                 "type": "array",
                 "items": {

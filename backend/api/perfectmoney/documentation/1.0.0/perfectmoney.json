@@ -594,9 +594,6 @@
                   "type": "string"
                 }
               },
-              "ordersell": {
-                "type": "string"
-              },
               "text": {
                 "type": "string"
               },

@@ -4,5 +4,6 @@
     "titleBar.activeBackground": "#0E4849",
     "titleBar.activeForeground": "#F3FDFD"
   },
-  "eslint.enable": false
+  "eslint.enable": false,
+  "git.ignoreLimitWarning": true
 }

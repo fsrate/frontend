@@ -54,10 +54,6 @@
       "collection": "skrill",
       "via": "currency"
     },
-    "ordersell": {
-      "via": "currency",
-      "model": "order"
-    },
     "text": {
       "type": "string"
     }

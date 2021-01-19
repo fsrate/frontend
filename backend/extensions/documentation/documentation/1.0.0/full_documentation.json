@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/15/2021 9:56:57 AM"
+    "x-generation-date": "01/19/2021 5:58:26 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -8022,9 +8022,6 @@
                     "type": "string"
                   }
                 },
-                "ordersell": {
-                  "type": "string"
-                },
                 "text": {
                   "type": "string"
                 },
@@ -8058,51 +8055,6 @@
                 },
                 "published_at": {
                   "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "orders": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "amount",
-                "upload"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "users_permissions_user": {
-                  "type": "string"
-                },
-                "currency": {
-                  "type": "string"
-                },
-                "amount": {
-                  "type": "integer"
-                },
-                "total": {
-                  "type": "number"
-                },
-                "status": {
-                  "type": "string"
-                },
-                "upload": {
-                  "type": "component"
-                },
-                "category": {
-                  "type": "string"
-                },
-                "price": {
-                  "type": "number"
                 },
                 "created_by": {
                   "type": "string"
@@ -8163,14 +8115,14 @@
                 "passport": {
                   "type": "component"
                 },
-                "ordersells": {
+                "category": {
+                  "type": "string"
+                },
+                "orders": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
-                },
-                "category": {
-                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"
@@ -8205,12 +8157,6 @@
             }
           },
           "guides": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "orders": {
             "type": "array",
             "items": {
               "type": "string"
@@ -8470,12 +8416,6 @@
                   "type": "string"
                 }
               },
-              "orders": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "users_permissions_users": {
                 "type": "array",
                 "items": {
@@ -8573,48 +8513,6 @@
               }
             }
           },
-          "ordersell": {
-            "required": [
-              "id",
-              "amount",
-              "upload"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "users_permissions_user": {
-                "type": "string"
-              },
-              "currency": {
-                "type": "string"
-              },
-              "amount": {
-                "type": "integer"
-              },
-              "total": {
-                "type": "number"
-              },
-              "status": {
-                "type": "string"
-              },
-              "upload": {
-                "type": "component"
-              },
-              "category": {
-                "type": "string"
-              },
-              "price": {
-                "type": "number"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "text": {
             "type": "string"
           },
@@ -8667,9 +8565,6 @@
             "items": {
               "type": "string"
             }
-          },
-          "ordersell": {
-            "type": "string"
           },
           "text": {
             "type": "string"
@@ -8993,12 +8888,6 @@
                 }
               },
               "guides": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "orders": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -9351,9 +9240,6 @@
                   "type": "string"
                 }
               },
-              "ordersell": {
-                "type": "string"
-              },
               "text": {
                 "type": "string"
               },
@@ -9506,9 +9392,6 @@
                             "type": "string"
                           }
                         },
-                        "ordersell": {
-                          "type": "string"
-                        },
                         "text": {
                           "type": "string"
                         },
@@ -9627,9 +9510,6 @@
                             "type": "string"
                           }
                         },
-                        "ordersell": {
-                          "type": "string"
-                        },
                         "text": {
                           "type": "string"
                         },
@@ -9666,9 +9546,7 @@
       },
       "Order": {
         "required": [
-          "id",
-          "amount",
-          "upload"
+          "id"
         ],
         "properties": {
           "id": {
@@ -9722,221 +9600,8 @@
               "passport": {
                 "type": "component"
               },
-              "ordersells": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "category": {
                 "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "currency": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "slug": {
-                "type": "uid"
-              },
-              "image": {
-                "type": "string"
-              },
-              "paypals": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "perfectmonies": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "webmonies": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "category": {
-                "type": "string"
-              },
-              "netellers": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "skrills": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "ordersell": {
-                "type": "string"
-              },
-              "text": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "amount": {
-            "type": "integer"
-          },
-          "total": {
-            "type": "number"
-          },
-          "status": {
-            "type": "string",
-            "default": "Pending",
-            "enum": [
-              "Pending",
-              "Completed",
-              "Canceled"
-            ]
-          },
-          "upload": {
-            "type": "object",
-            "required": [
-              "id",
-              "image"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "image": {
-                "required": [
-                  "id",
-                  "name",
-                  "hash",
-                  "mime",
-                  "size",
-                  "url",
-                  "provider"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "alternativeText": {
-                    "type": "string"
-                  },
-                  "caption": {
-                    "type": "string"
-                  },
-                  "width": {
-                    "type": "integer"
-                  },
-                  "height": {
-                    "type": "integer"
-                  },
-                  "formats": {
-                    "type": "object"
-                  },
-                  "hash": {
-                    "type": "string"
-                  },
-                  "ext": {
-                    "type": "string"
-                  },
-                  "mime": {
-                    "type": "string"
-                  },
-                  "size": {
-                    "type": "number"
-                  },
-                  "url": {
-                    "type": "string"
-                  },
-                  "previewUrl": {
-                    "type": "string"
-                  },
-                  "provider": {
-                    "type": "string"
-                  },
-                  "provider_metadata": {
-                    "type": "object"
-                  },
-                  "related": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
-                }
-              },
-              "caption": {
-                "type": "string"
-              }
-            }
-          },
-          "category": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "slug": {
-                "type": "uid"
-              },
-              "image": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "currencies": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "guides": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
               },
               "orders": {
                 "type": "array",
@@ -9944,15 +9609,6 @@
                   "type": "string"
                 }
               },
-              "users_permissions_users": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
               "created_by": {
                 "type": "string"
               },
@@ -9961,37 +9617,23 @@
               }
             }
           },
-          "price": {
-            "type": "number"
-          }
-        }
-      },
-      "NewOrder": {
-        "required": [
-          "amount",
-          "upload"
-        ],
-        "properties": {
-          "users_permissions_user": {
+          "product": {
             "type": "string"
           },
-          "currency": {
+          "kind": {
             "type": "string"
           },
           "amount": {
-            "type": "integer"
+            "type": "number"
+          },
+          "price": {
+            "type": "number"
           },
           "total": {
             "type": "number"
           },
           "status": {
-            "type": "string",
-            "default": "Pending",
-            "enum": [
-              "Pending",
-              "Completed",
-              "Canceled"
-            ]
+            "type": "string"
           },
           "upload": {
             "type": "object",
@@ -10075,11 +9717,120 @@
               }
             }
           },
-          "category": {
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewOrder": {
+        "properties": {
+          "users_permissions_user": {
             "type": "string"
+          },
+          "product": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number"
           },
           "price": {
             "type": "number"
+          },
+          "total": {
+            "type": "number"
+          },
+          "status": {
+            "type": "string"
+          },
+          "upload": {
+            "type": "object",
+            "required": [
+              "id",
+              "image"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "image": {
+                "required": [
+                  "id",
+                  "name",
+                  "hash",
+                  "mime",
+                  "size",
+                  "url",
+                  "provider"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "alternativeText": {
+                    "type": "string"
+                  },
+                  "caption": {
+                    "type": "string"
+                  },
+                  "width": {
+                    "type": "integer"
+                  },
+                  "height": {
+                    "type": "integer"
+                  },
+                  "formats": {
+                    "type": "object"
+                  },
+                  "hash": {
+                    "type": "string"
+                  },
+                  "ext": {
+                    "type": "string"
+                  },
+                  "mime": {
+                    "type": "string"
+                  },
+                  "size": {
+                    "type": "number"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "previewUrl": {
+                    "type": "string"
+                  },
+                  "provider": {
+                    "type": "string"
+                  },
+                  "provider_metadata": {
+                    "type": "object"
+                  },
+                  "related": {
+                    "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
+                    "type": "string"
+                  }
+                }
+              },
+              "caption": {
+                "type": "string"
+              }
+            }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -10168,9 +9919,6 @@
                 "items": {
                   "type": "string"
                 }
-              },
-              "ordersell": {
-                "type": "string"
               },
               "text": {
                 "type": "string"
@@ -10308,9 +10056,6 @@
                   "type": "string"
                 }
               },
-              "ordersell": {
-                "type": "string"
-              },
               "text": {
                 "type": "string"
               },
@@ -10447,9 +10192,6 @@
                   "type": "string"
                 }
               },
-              "ordersell": {
-                "type": "string"
-              },
               "text": {
                 "type": "string"
               },
@@ -10585,9 +10327,6 @@
                 "items": {
                   "type": "string"
                 }
-              },
-              "ordersell": {
-                "type": "string"
               },
               "text": {
                 "type": "string"
@@ -10755,14 +10494,14 @@
                 "passport": {
                   "type": "component"
                 },
-                "ordersells": {
+                "category": {
+                  "type": "string"
+                },
+                "orders": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
-                },
-                "category": {
-                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"
@@ -10973,51 +10712,6 @@
               }
             }
           },
-          "ordersells": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "amount",
-                "upload"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "users_permissions_user": {
-                  "type": "string"
-                },
-                "currency": {
-                  "type": "string"
-                },
-                "amount": {
-                  "type": "integer"
-                },
-                "total": {
-                  "type": "number"
-                },
-                "status": {
-                  "type": "string"
-                },
-                "upload": {
-                  "type": "component"
-                },
-                "category": {
-                  "type": "string"
-                },
-                "price": {
-                  "type": "number"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "category": {
             "required": [
               "id"
@@ -11050,12 +10744,6 @@
                   "type": "string"
                 }
               },
-              "orders": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "users_permissions_users": {
                 "type": "array",
                 "items": {
@@ -11070,6 +10758,52 @@
               },
               "updated_by": {
                 "type": "string"
+              }
+            }
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "users_permissions_user": {
+                  "type": "string"
+                },
+                "product": {
+                  "type": "string"
+                },
+                "kind": {
+                  "type": "string"
+                },
+                "amount": {
+                  "type": "number"
+                },
+                "price": {
+                  "type": "number"
+                },
+                "total": {
+                  "type": "number"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "upload": {
+                  "type": "component"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
           }
@@ -11210,14 +10944,14 @@
               }
             }
           },
-          "ordersells": {
+          "category": {
+            "type": "string"
+          },
+          "orders": {
             "type": "array",
             "items": {
               "type": "string"
             }
-          },
-          "category": {
-            "type": "string"
           },
           "created_by": {
             "type": "string"

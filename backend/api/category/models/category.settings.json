@@ -40,14 +40,10 @@
       "collection": "guides",
       "via": "category"
     },
-    "orders": {
-      "via": "category",
-      "collection": "order"
-    },
     "users_permissions_users": {
-      "via": "category",
       "plugin": "users-permissions",
-      "collection": "user"
+      "collection": "user",
+      "via": "category"
     }
   }
 }

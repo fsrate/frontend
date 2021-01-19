@@ -623,9 +623,6 @@
                             "type": "string"
                           }
                         },
-                        "ordersell": {
-                          "type": "string"
-                        },
                         "text": {
                           "type": "string"
                         },
@@ -743,9 +740,6 @@
                           "items": {
                             "type": "string"
                           }
-                        },
-                        "ordersell": {
-                          "type": "string"
                         },
                         "text": {
                           "type": "string"
