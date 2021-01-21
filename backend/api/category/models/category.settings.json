@@ -33,8 +33,8 @@
       "type": "string"
     },
     "currencies": {
-      "via": "category",
-      "collection": "currency"
+      "collection": "currency",
+      "via": "category"
     },
     "guides": {
       "collection": "guides",
@@ -43,6 +43,10 @@
     "users_permissions_users": {
       "plugin": "users-permissions",
       "collection": "user",
+      "via": "category"
+    },
+    "orders": {
+      "collection": "order",
       "via": "category"
     }
   }

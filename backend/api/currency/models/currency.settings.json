@@ -43,8 +43,8 @@
       "via": "currency"
     },
     "category": {
-      "model": "category",
-      "via": "currencies"
+      "via": "currencies",
+      "model": "category"
     },
     "netellers": {
       "collection": "neteller",

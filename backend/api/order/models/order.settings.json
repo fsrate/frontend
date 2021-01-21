@@ -11,9 +11,9 @@
   },
   "attributes": {
     "users_permissions_user": {
+      "via": "orders",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "orders"
+      "model": "user"
     },
     "product": {
       "type": "string"
@@ -37,6 +37,10 @@
       "type": "component",
       "repeatable": false,
       "component": "users.user-order-uploads"
+    },
+    "category": {
+      "via": "orders",
+      "model": "category"
     }
   }
 }

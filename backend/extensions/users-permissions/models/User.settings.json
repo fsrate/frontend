@@ -83,8 +83,13 @@
       "model": "category"
     },
     "orders": {
-      "via": "users_permissions_user",
-      "collection": "order"
+      "collection": "order",
+      "via": "users_permissions_user"
+    },
+    "Banks": {
+      "type": "component",
+      "repeatable": false,
+      "component": "users.banks"
     }
   }
 }

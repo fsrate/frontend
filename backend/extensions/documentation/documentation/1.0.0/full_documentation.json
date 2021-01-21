@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/19/2021 5:58:26 PM"
+    "x-generation-date": "01/21/2021 8:04:00 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -8124,6 +8124,58 @@
                     "type": "string"
                   }
                 },
+                "Banks": {
+                  "type": "component"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "users_permissions_user": {
+                  "type": "string"
+                },
+                "product": {
+                  "type": "string"
+                },
+                "kind": {
+                  "type": "string"
+                },
+                "amount": {
+                  "type": "number"
+                },
+                "price": {
+                  "type": "number"
+                },
+                "total": {
+                  "type": "number"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "upload": {
+                  "type": "component"
+                },
+                "category": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -8163,6 +8215,12 @@
             }
           },
           "users_permissions_users": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "orders": {
             "type": "array",
             "items": {
               "type": "string"
@@ -8417,6 +8475,12 @@
                 }
               },
               "users_permissions_users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "orders": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -8894,6 +8958,12 @@
                 }
               },
               "users_permissions_users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "orders": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -9609,6 +9679,9 @@
                   "type": "string"
                 }
               },
+              "Banks": {
+                "type": "component"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -9713,6 +9786,61 @@
                 }
               },
               "caption": {
+                "type": "string"
+              }
+            }
+          },
+          "category": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "slug": {
+                "type": "uid"
+              },
+              "image": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "currencies": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "guides": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "users_permissions_users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "orders": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
                 "type": "string"
               }
             }
@@ -9827,6 +9955,9 @@
                 "type": "string"
               }
             }
+          },
+          "category": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -10503,6 +10634,9 @@
                     "type": "string"
                   }
                 },
+                "Banks": {
+                  "type": "component"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -10750,6 +10884,12 @@
                   "type": "string"
                 }
               },
+              "orders": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "published_at": {
                 "type": "string"
               },
@@ -10795,6 +10935,9 @@
                 "upload": {
                   "type": "component"
                 },
+                "category": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -10803,6 +10946,90 @@
                 },
                 "updated_by": {
                   "type": "string"
+                }
+              }
+            }
+          },
+          "Banks": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "bankName": {
+                "type": "string"
+              },
+              "bankNumber": {
+                "type": "integer"
+              },
+              "passbookImage": {
+                "required": [
+                  "id",
+                  "name",
+                  "hash",
+                  "mime",
+                  "size",
+                  "url",
+                  "provider"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "alternativeText": {
+                    "type": "string"
+                  },
+                  "caption": {
+                    "type": "string"
+                  },
+                  "width": {
+                    "type": "integer"
+                  },
+                  "height": {
+                    "type": "integer"
+                  },
+                  "formats": {
+                    "type": "object"
+                  },
+                  "hash": {
+                    "type": "string"
+                  },
+                  "ext": {
+                    "type": "string"
+                  },
+                  "mime": {
+                    "type": "string"
+                  },
+                  "size": {
+                    "type": "number"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "previewUrl": {
+                    "type": "string"
+                  },
+                  "provider": {
+                    "type": "string"
+                  },
+                  "provider_metadata": {
+                    "type": "object"
+                  },
+                  "related": {
+                    "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -10951,6 +11178,90 @@
             "type": "array",
             "items": {
               "type": "string"
+            }
+          },
+          "Banks": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "bankName": {
+                "type": "string"
+              },
+              "bankNumber": {
+                "type": "integer"
+              },
+              "passbookImage": {
+                "required": [
+                  "id",
+                  "name",
+                  "hash",
+                  "mime",
+                  "size",
+                  "url",
+                  "provider"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "alternativeText": {
+                    "type": "string"
+                  },
+                  "caption": {
+                    "type": "string"
+                  },
+                  "width": {
+                    "type": "integer"
+                  },
+                  "height": {
+                    "type": "integer"
+                  },
+                  "formats": {
+                    "type": "object"
+                  },
+                  "hash": {
+                    "type": "string"
+                  },
+                  "ext": {
+                    "type": "string"
+                  },
+                  "mime": {
+                    "type": "string"
+                  },
+                  "size": {
+                    "type": "number"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "previewUrl": {
+                    "type": "string"
+                  },
+                  "provider": {
+                    "type": "string"
+                  },
+                  "provider_metadata": {
+                    "type": "object"
+                  },
+                  "related": {
+                    "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
+                    "type": "string"
+                  }
+                }
+              }
             }
           },
           "created_by": {

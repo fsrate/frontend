@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_users_banks",
+  "info": {
+    "name": "Banks",
+    "icon": "archway"
+  },
+  "options": {},
+  "attributes": {
+    "bankName": {
+      "type": "string"
+    },
+    "bankNumber": {
+      "type": "biginteger"
+    },
+    "passbookImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
