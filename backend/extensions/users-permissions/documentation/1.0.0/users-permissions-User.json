@@ -1403,51 +1403,45 @@
             }
           },
           "orders": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "users_permissions_user": {
-                  "type": "string"
-                },
-                "product": {
-                  "type": "string"
-                },
-                "kind": {
-                  "type": "string"
-                },
-                "amount": {
-                  "type": "number"
-                },
-                "price": {
-                  "type": "number"
-                },
-                "total": {
-                  "type": "number"
-                },
-                "status": {
-                  "type": "string"
-                },
-                "upload": {
-                  "type": "component"
-                },
-                "category": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "product": {
+                "type": "string"
+              },
+              "kind": {
+                "type": "string"
+              },
+              "amount": {
+                "type": "number"
+              },
+              "price": {
+                "type": "number"
+              },
+              "total": {
+                "type": "number"
+              },
+              "status": {
+                "type": "string"
+              },
+              "upload": {
+                "type": "component"
+              },
+              "category": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -1676,10 +1670,7 @@
             "type": "string"
           },
           "orders": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+            "type": "string"
           },
           "Banks": {
             "type": "object",

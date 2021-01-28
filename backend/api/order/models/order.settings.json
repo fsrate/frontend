@@ -10,11 +10,6 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "users_permissions_user": {
-      "via": "orders",
-      "plugin": "users-permissions",
-      "model": "user"
-    },
     "product": {
       "type": "string"
     },

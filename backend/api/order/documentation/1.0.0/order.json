@@ -522,74 +522,6 @@
           "id": {
             "type": "string"
           },
-          "users_permissions_user": {
-            "required": [
-              "id",
-              "username",
-              "email",
-              "mobile",
-              "fullName"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmationToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "mobile": {
-                "type": "string"
-              },
-              "fullName": {
-                "type": "string"
-              },
-              "passport": {
-                "type": "component"
-              },
-              "category": {
-                "type": "string"
-              },
-              "orders": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "Banks": {
-                "type": "component"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "product": {
             "type": "string"
           },
@@ -753,9 +685,6 @@
       },
       "NewOrder": {
         "properties": {
-          "users_permissions_user": {
-            "type": "string"
-          },
           "product": {
             "type": "string"
           },

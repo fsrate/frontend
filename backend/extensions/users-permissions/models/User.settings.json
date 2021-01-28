@@ -79,12 +79,11 @@
       "component": "users.user-uploads"
     },
     "category": {
-      "via": "users_permissions_users",
-      "model": "category"
+      "model": "category",
+      "via": "users_permissions_users"
     },
     "orders": {
-      "collection": "order",
-      "via": "users_permissions_user"
+      "collection": "order"
     },
     "Banks": {
       "type": "component",

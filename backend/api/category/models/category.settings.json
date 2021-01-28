@@ -41,9 +41,9 @@
       "via": "category"
     },
     "users_permissions_users": {
+      "via": "category",
       "plugin": "users-permissions",
-      "collection": "user",
-      "via": "category"
+      "collection": "user"
     },
     "orders": {
       "collection": "order",

@@ -576,10 +576,7 @@
                   "type": "string"
                 },
                 "orders": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                  "type": "string"
                 },
                 "Banks": {
                   "type": "component"
