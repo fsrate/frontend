@@ -36,6 +36,11 @@
     "category": {
       "via": "orders",
       "model": "category"
+    },
+    "user": {
+      "via": "orders",
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }

@@ -83,7 +83,8 @@
       "via": "users_permissions_users"
     },
     "orders": {
-      "collection": "order"
+      "collection": "order",
+      "via": "user"
     },
     "Banks": {
       "type": "component",

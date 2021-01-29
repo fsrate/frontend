@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/29/2021 12:01:10 AM"
+    "x-generation-date": "01/30/2021 4:38:18 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -8119,7 +8119,10 @@
                   "type": "string"
                 },
                 "orders": {
-                  "type": "string"
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "Banks": {
                   "type": "component"
@@ -8165,6 +8168,9 @@
                   "type": "component"
                 },
                 "category": {
+                  "type": "string"
+                },
+                "user": {
                   "type": "string"
                 },
                 "published_at": {
@@ -9771,6 +9777,74 @@
               }
             }
           },
+          "user": {
+            "required": [
+              "id",
+              "username",
+              "email",
+              "mobile",
+              "fullName"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "mobile": {
+                "type": "string"
+              },
+              "fullName": {
+                "type": "string"
+              },
+              "passport": {
+                "type": "component"
+              },
+              "category": {
+                "type": "string"
+              },
+              "orders": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "Banks": {
+                "type": "component"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -9880,6 +9954,9 @@
             }
           },
           "category": {
+            "type": "string"
+          },
+          "user": {
             "type": "string"
           },
           "published_at": {
@@ -10552,7 +10629,10 @@
                   "type": "string"
                 },
                 "orders": {
-                  "type": "string"
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "Banks": {
                   "type": "component"
@@ -10822,45 +10902,51 @@
             }
           },
           "orders": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "product": {
-                "type": "string"
-              },
-              "kind": {
-                "type": "string"
-              },
-              "amount": {
-                "type": "number"
-              },
-              "price": {
-                "type": "number"
-              },
-              "total": {
-                "type": "number"
-              },
-              "status": {
-                "type": "string"
-              },
-              "upload": {
-                "type": "component"
-              },
-              "category": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "product": {
+                  "type": "string"
+                },
+                "kind": {
+                  "type": "string"
+                },
+                "amount": {
+                  "type": "number"
+                },
+                "price": {
+                  "type": "number"
+                },
+                "total": {
+                  "type": "number"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "upload": {
+                  "type": "component"
+                },
+                "category": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -11089,7 +11175,10 @@
             "type": "string"
           },
           "orders": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "Banks": {
             "type": "object",
