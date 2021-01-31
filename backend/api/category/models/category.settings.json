@@ -46,8 +46,8 @@
       "collection": "user"
     },
     "orders": {
-      "collection": "order",
-      "via": "category"
+      "via": "category",
+      "collection": "order"
     }
   }
 }

@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_users_orders",
+  "info": {
+    "name": "Orders",
+    "icon": "archive",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "currency": {
+      "model": "currency"
+    },
+    "kind": {
+      "type": "enumeration",
+      "enum": [
+        "Sell",
+        "Buy"
+      ]
+    },
+    "amount": {
+      "type": "float"
+    },
+    "price": {
+      "type": "float"
+    },
+    "total": {
+      "type": "float"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Pending",
+        "Done",
+        "Canceled",
+        "Failed",
+        "Required"
+      ],
+      "default": "Pending"
+    }
+  }
+}

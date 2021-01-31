@@ -755,9 +755,6 @@
                     "type": "string"
                   }
                 },
-                "Banks": {
-                  "type": "component"
-                },
                 "created_by": {
                   "type": "string"
                 },
@@ -795,13 +792,10 @@
                 "status": {
                   "type": "string"
                 },
-                "upload": {
-                  "type": "component"
-                },
                 "category": {
                   "type": "string"
                 },
-                "user": {
+                "users_permissions_user": {
                   "type": "string"
                 },
                 "published_at": {

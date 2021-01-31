@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/30/2021 4:38:18 AM"
+    "x-generation-date": "01/30/2021 4:08:14 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -8124,9 +8124,6 @@
                     "type": "string"
                   }
                 },
-                "Banks": {
-                  "type": "component"
-                },
                 "created_by": {
                   "type": "string"
                 },
@@ -8164,13 +8161,10 @@
                 "status": {
                   "type": "string"
                 },
-                "upload": {
-                  "type": "component"
-                },
                 "category": {
                   "type": "string"
                 },
-                "user": {
+                "users_permissions_user": {
                   "type": "string"
                 },
                 "published_at": {
@@ -9640,88 +9634,6 @@
           "status": {
             "type": "string"
           },
-          "upload": {
-            "type": "object",
-            "required": [
-              "id",
-              "image"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "image": {
-                "required": [
-                  "id",
-                  "name",
-                  "hash",
-                  "mime",
-                  "size",
-                  "url",
-                  "provider"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "alternativeText": {
-                    "type": "string"
-                  },
-                  "caption": {
-                    "type": "string"
-                  },
-                  "width": {
-                    "type": "integer"
-                  },
-                  "height": {
-                    "type": "integer"
-                  },
-                  "formats": {
-                    "type": "object"
-                  },
-                  "hash": {
-                    "type": "string"
-                  },
-                  "ext": {
-                    "type": "string"
-                  },
-                  "mime": {
-                    "type": "string"
-                  },
-                  "size": {
-                    "type": "number"
-                  },
-                  "url": {
-                    "type": "string"
-                  },
-                  "previewUrl": {
-                    "type": "string"
-                  },
-                  "provider": {
-                    "type": "string"
-                  },
-                  "provider_metadata": {
-                    "type": "object"
-                  },
-                  "related": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
-                }
-              },
-              "caption": {
-                "type": "string"
-              }
-            }
-          },
           "category": {
             "required": [
               "id"
@@ -9777,7 +9689,7 @@
               }
             }
           },
-          "user": {
+          "users_permissions_user": {
             "required": [
               "id",
               "username",
@@ -9834,9 +9746,6 @@
                   "type": "string"
                 }
               },
-              "Banks": {
-                "type": "component"
-              },
               "created_by": {
                 "type": "string"
               },
@@ -9871,92 +9780,10 @@
           "status": {
             "type": "string"
           },
-          "upload": {
-            "type": "object",
-            "required": [
-              "id",
-              "image"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "image": {
-                "required": [
-                  "id",
-                  "name",
-                  "hash",
-                  "mime",
-                  "size",
-                  "url",
-                  "provider"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "alternativeText": {
-                    "type": "string"
-                  },
-                  "caption": {
-                    "type": "string"
-                  },
-                  "width": {
-                    "type": "integer"
-                  },
-                  "height": {
-                    "type": "integer"
-                  },
-                  "formats": {
-                    "type": "object"
-                  },
-                  "hash": {
-                    "type": "string"
-                  },
-                  "ext": {
-                    "type": "string"
-                  },
-                  "mime": {
-                    "type": "string"
-                  },
-                  "size": {
-                    "type": "number"
-                  },
-                  "url": {
-                    "type": "string"
-                  },
-                  "previewUrl": {
-                    "type": "string"
-                  },
-                  "provider": {
-                    "type": "string"
-                  },
-                  "provider_metadata": {
-                    "type": "object"
-                  },
-                  "related": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
-                }
-              },
-              "caption": {
-                "type": "string"
-              }
-            }
-          },
           "category": {
             "type": "string"
           },
-          "user": {
+          "users_permissions_user": {
             "type": "string"
           },
           "published_at": {
@@ -10634,9 +10461,6 @@
                     "type": "string"
                   }
                 },
-                "Banks": {
-                  "type": "component"
-                },
                 "created_by": {
                   "type": "string"
                 },
@@ -10929,13 +10753,10 @@
                 "status": {
                   "type": "string"
                 },
-                "upload": {
-                  "type": "component"
-                },
                 "category": {
                   "type": "string"
                 },
-                "user": {
+                "users_permissions_user": {
                   "type": "string"
                 },
                 "published_at": {
@@ -10946,90 +10767,6 @@
                 },
                 "updated_by": {
                   "type": "string"
-                }
-              }
-            }
-          },
-          "Banks": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "bankName": {
-                "type": "string"
-              },
-              "bankNumber": {
-                "type": "integer"
-              },
-              "passbookImage": {
-                "required": [
-                  "id",
-                  "name",
-                  "hash",
-                  "mime",
-                  "size",
-                  "url",
-                  "provider"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "alternativeText": {
-                    "type": "string"
-                  },
-                  "caption": {
-                    "type": "string"
-                  },
-                  "width": {
-                    "type": "integer"
-                  },
-                  "height": {
-                    "type": "integer"
-                  },
-                  "formats": {
-                    "type": "object"
-                  },
-                  "hash": {
-                    "type": "string"
-                  },
-                  "ext": {
-                    "type": "string"
-                  },
-                  "mime": {
-                    "type": "string"
-                  },
-                  "size": {
-                    "type": "number"
-                  },
-                  "url": {
-                    "type": "string"
-                  },
-                  "previewUrl": {
-                    "type": "string"
-                  },
-                  "provider": {
-                    "type": "string"
-                  },
-                  "provider_metadata": {
-                    "type": "object"
-                  },
-                  "related": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
                 }
               }
             }
@@ -11178,90 +10915,6 @@
             "type": "array",
             "items": {
               "type": "string"
-            }
-          },
-          "Banks": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "bankName": {
-                "type": "string"
-              },
-              "bankNumber": {
-                "type": "integer"
-              },
-              "passbookImage": {
-                "required": [
-                  "id",
-                  "name",
-                  "hash",
-                  "mime",
-                  "size",
-                  "url",
-                  "provider"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "alternativeText": {
-                    "type": "string"
-                  },
-                  "caption": {
-                    "type": "string"
-                  },
-                  "width": {
-                    "type": "integer"
-                  },
-                  "height": {
-                    "type": "integer"
-                  },
-                  "formats": {
-                    "type": "object"
-                  },
-                  "hash": {
-                    "type": "string"
-                  },
-                  "ext": {
-                    "type": "string"
-                  },
-                  "mime": {
-                    "type": "string"
-                  },
-                  "size": {
-                    "type": "number"
-                  },
-                  "url": {
-                    "type": "string"
-                  },
-                  "previewUrl": {
-                    "type": "string"
-                  },
-                  "provider": {
-                    "type": "string"
-                  },
-                  "provider_metadata": {
-                    "type": "object"
-                  },
-                  "related": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
-                }
-              }
             }
           },
           "created_by": {

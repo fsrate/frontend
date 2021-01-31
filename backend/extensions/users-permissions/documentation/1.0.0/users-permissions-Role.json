@@ -581,9 +581,6 @@
                     "type": "string"
                   }
                 },
-                "Banks": {
-                  "type": "component"
-                },
                 "created_by": {
                   "type": "string"
                 },
