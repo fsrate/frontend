@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/30/2021 4:08:14 PM"
+    "x-generation-date": "02/01/2021 5:37:02 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -8167,6 +8167,9 @@
                 "users_permissions_user": {
                   "type": "string"
                 },
+                "color": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -9631,9 +9634,6 @@
           "total": {
             "type": "number"
           },
-          "status": {
-            "type": "string"
-          },
           "category": {
             "required": [
               "id"
@@ -9754,6 +9754,24 @@
               }
             }
           },
+          "color": {
+            "type": "string",
+            "default": "info",
+            "enum": [
+              "info",
+              "success",
+              "danger"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "default": "Pending",
+            "enum": [
+              "Pending",
+              "Done",
+              "Canceled"
+            ]
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -9777,14 +9795,29 @@
           "total": {
             "type": "number"
           },
-          "status": {
-            "type": "string"
-          },
           "category": {
             "type": "string"
           },
           "users_permissions_user": {
             "type": "string"
+          },
+          "color": {
+            "type": "string",
+            "default": "info",
+            "enum": [
+              "info",
+              "success",
+              "danger"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "default": "Pending",
+            "enum": [
+              "Pending",
+              "Done",
+              "Canceled"
+            ]
           },
           "published_at": {
             "type": "string",
@@ -10757,6 +10790,9 @@
                   "type": "string"
                 },
                 "users_permissions_user": {
+                  "type": "string"
+                },
+                "color": {
                   "type": "string"
                 },
                 "published_at": {

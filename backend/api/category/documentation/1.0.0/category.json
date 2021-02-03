@@ -798,6 +798,9 @@
                 "users_permissions_user": {
                   "type": "string"
                 },
+                "color": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },

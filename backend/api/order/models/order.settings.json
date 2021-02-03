@@ -26,9 +26,6 @@
     "total": {
       "type": "float"
     },
-    "status": {
-      "type": "string"
-    },
     "category": {
       "model": "category",
       "via": "orders"
@@ -37,6 +34,24 @@
       "plugin": "users-permissions",
       "model": "user",
       "via": "orders"
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "info",
+        "success",
+        "danger"
+      ],
+      "default": "info"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Pending",
+        "Done",
+        "Canceled"
+      ],
+      "default": "Pending"
     }
   }
 }
