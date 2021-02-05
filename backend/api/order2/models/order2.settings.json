@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "order2s",
+  "info": {
+    "name": "order2"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "item": {
+      "type": "json"
+    }
+  }
+}
