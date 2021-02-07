@@ -17,6 +17,7 @@
         "fs": "^0.0.1-security",
         "knex": "^0.21.14",
         "mongodb": "^3.6.3",
+        "nodemailer": "^6.4.17",
         "strapi": "3.4.5",
         "strapi-admin": "3.4.5",
         "strapi-connector-mongoose": "^3.4.5",
