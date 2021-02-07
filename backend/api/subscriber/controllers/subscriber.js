@@ -8,19 +8,19 @@ const nodemailer = require('nodemailer');
 module.exports = {
     async create(ctx) {
         const { Email } = ctx.request.body;
-        const existingSub = await strapi.services.subscriber.find({ Email });
+        const existingSub = await strapi.subscriber.services.find({ Email });
         if (!existingSub) {
-            await strapi.services.subscriber.create({ Email });
+            await strapi.subscriber.services.create({ Email });
             try {
                 let transporter = nodemailer.createTransport({
-                    service: 'mail.google.com',
+                    service: 'gmail',
                     auth: {
                         user: 'admin@fs-rate.com',
                         pass: '@Cyaver123'
                     }
                 });
                 const mailOptions = {
-                    from: 'subscriber@fs-rate.com',
+                    from: 'cs@fs-rate.com',
                     to: `${Email}`,
                     subject: 'ยืนยันการทำรายการ',
                     text: `สวัสดี คุณ ${Email} เราได้รับคำสั่งองท่านแล้ว`
